@@ -841,45 +841,6 @@
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
   
-  <!-- Loading animation script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Hide loader after page is fully loaded
-      window.addEventListener('load', function() {
-        const loader = document.querySelector('.loader-wrapper');
-        const content = document.querySelector('.content');
-        
-        // Add hidden class to loader
-        loader.classList.add('loader-hidden');
-        
-        // Show content
-        content.classList.add('visible');
-        
-        // Remove loader from DOM after animation completes
-        setTimeout(function() {
-          loader.style.display = 'none';
-        }, 500);
-      });
-      
-      // Back to Top Button functionality
-      const backToTopButton = document.querySelector('.back-to-top');
-      
-      window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-          backToTopButton.classList.add('visible');
-        } else {
-          backToTopButton.classList.remove('visible');
-        }
-      });
-      
-      backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
 </body>
 
 </html>
