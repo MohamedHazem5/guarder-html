@@ -226,6 +226,29 @@ body {
     }
   }
 
+  .mobile-menu-close {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    padding: 10px;
+    color: $white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $primary2;
+      transform: rotate(90deg);
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .navbar-collapse.show + .mobile-menu-close {
+      display: block;
+    }
+  }
 }
 
 a,
